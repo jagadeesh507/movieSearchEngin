@@ -1,6 +1,8 @@
 import React from 'react'
 import {Flex,Box,chakra} from "@chakra-ui/react"
 function SmallCard({title}) {
+  // {Titile,Poster,Year,imdbID}=title;
+  if(!title) return
   return (
     <Flex
   p={2}
@@ -105,7 +107,7 @@ function SmallCard({title}) {
     </Box>
   </Flex>
 </Flex>
-  )
+  );
 }
 
 export default SmallCard
