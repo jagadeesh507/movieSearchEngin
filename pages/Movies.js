@@ -14,6 +14,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { MdOutlineScreenSearchDesktop } from "react-icons/md";
 import SmallCard from "./SmallCard";
+import Moviecard from "./Moviecard";
 function Movies() {
   const [movies, setMovies] = useState([]);
   const [MovieSearch, SetMovieSearch] = useState("");
@@ -90,9 +91,9 @@ function Movies() {
       </Flex>
       {movies?.length > 0 ? (
         <SimpleGrid pt={"20px"} minChildWidth="250px" spacing="40px">
-          {movies.map((name) => (
+          {movies.map((name) => (<>
             <SmallCard key={name} title={name} />
-          ))}
+            </> ))}
         </SimpleGrid>
       ) : (
         <Flex justifyContent={"center"} alignItems={"center"}>
